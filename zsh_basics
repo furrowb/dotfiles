@@ -1,0 +1,42 @@
+source ~/.dotfiles/aliases
+
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.scripts" # Add scripts to shell
+export PATH="$PATH:$HOME/.local/bin" # Add scripts to shell
+export PATH="$PATH:$HOME/.cargo/bin" # Rust tools
+export PATH="$PATH:$HOME/.rbenv/bin" # Add rbenv
+export PATH="$PATH:$HOME/.npm-global/bin" # Add NPM globals
+
+# Check if rbenv is installed. If so, initialize
+which rbenv &>/dev/null
+[ $? -eq 0 ] && eval "$(rbenv init -)"
+
+#git map branch to remote
+function mapbranch() {
+  git branch --set-upstream-to=origin/$1 $1
+}
+
+#fix delete key for Mac
+bindkey "^[[3~" delete-char
+
+#fix ctrl-left/right for Mac
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+#allow history sharing between terminals
+HISTFILE=~/.zsh_history
+setopt inc_append_history
+
+# No beeps
+setopt NO_BEEP
+
+#setopt share_history
+HISTSIZE=1024 # the size in bytes it can grow up to
+SAVEHIST=1000 # the maximum number of commands to save
+
+# NPM version manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Fix Pulse Audio/Wine issues
+# export PULSE_LATENCY_MSEC=60

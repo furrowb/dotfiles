@@ -1,0 +1,22 @@
+#tmux aliases
+alias newmux='tmux new -s'
+alias demux='tmux detach'
+alias tmuxa='tmux a -t'
+alias killmux='tmux kill-session -t'
+
+#git aliases
+alias gitsub='git submodule update'
+alias gitsubinit='git submodule update --init'
+alias arbolog="git log --graph --pretty=tformat:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(yellow)<%an>%Creset' --abbrev-commit --date=relative"
+alias gitdelm="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
+
+#gradle alias
+alias grad="./gradlew --console=plain"
+
+#docker compose
+alias doco="docker-compose"
+
+#escape rake brackets by default
+alias rake='noglob rake'
+
+
