@@ -18,6 +18,22 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tomtom/checksyntax_vim'
 " Rust plugin
 Plugin 'rust-lang/rust.vim'
+" Git stuff
+Plugin 'airblade/vim-gitgutter'
+" Theme
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='powerlineish'
+" Use :Tab /<Char> to align on
+Plugin 'godlygeek/tabular'
+" Fzf
+" Plugin 'junegunn/fzf'
+" Indent Indicator
+Plugin 'nathanaelkane/vim-indent-guides'
+" Use cs<Char to replace><Char to replace with>
+Plugin 'tpope/vim-surround'
+call vundle#end()
 " ---------------------------------------------------
 
 
