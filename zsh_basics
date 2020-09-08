@@ -1,4 +1,4 @@
-source ~/.dotfiles/aliases
+source "$HOME/.dotfiles/aliases"
 
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.scripts" # Add scripts to shell
@@ -13,7 +13,9 @@ which rbenv &>/dev/null
 
 #git map branch to remote
 function mapbranch() {
-  git branch --set-upstream-to=origin/$1 $1
+  remote=${1:-origin}
+  current_branch=$(git rev-parse --abbrev-ref HEAD)
+  git branch --set-upstream-to=$remote/$current_branch $current_branch
 }
 
 #fix delete key for Mac
@@ -24,7 +26,7 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
 #allow history sharing between terminals
-HISTFILE=~/.zsh_history
+HISTFILE="$HOME/.zsh_history"
 setopt inc_append_history
 
 # No beeps
@@ -38,5 +40,7 @@ SAVEHIST=1000 # the maximum number of commands to save
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# Fix Pulse Audio/Wine issues
-# export PULSE_LATENCY_MSEC=60
+# If custom setup exists, use that
+if [[ -f "$HOME/.dotfiles/custom.sh" ]]; then
+  source ~/.dotfiles/custom.sh
+fi

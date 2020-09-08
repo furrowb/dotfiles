@@ -2,8 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
-source ~/.dotfiles/zsh_basics
+export ZSH="$HOME/.oh-my-zsh"
+source "$HOME/.dotfiles/zsh_basics"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
