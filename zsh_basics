@@ -41,6 +41,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # If custom setup exists, use that
-if [[ -f "$HOME/.dotfiles/custom.sh" ]]; then
-  source ~/.dotfiles/custom.sh
-fi
+[[ -f "$HOME/.dotfiles/custom.sh" ]] && source ~/.dotfiles/custom.sh
