@@ -16,6 +16,7 @@ BULLETTRAIN_PROMPT_ORDER=(
   context
   ruby
   dir
+  kctx
   git
   time
   status
@@ -27,6 +28,8 @@ BULLETTRAIN_TIME_BG=blue
 BULLETTRAIN_PROMPT_ADD_NEWLINE=false
 BULLETTRAIN_STATUS_EXIT_SHOW=true
 BULLETTRAIN_CUSTOM_BG=magenta
+BULLETTRAIN_KCTX_BG=green
+BULLETTRAIN_KCTX_FG=black
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 

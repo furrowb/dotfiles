@@ -12,10 +12,10 @@ which rbenv &>/dev/null
 [ $? -eq 0 ] && eval "$(rbenv init -)"
 
 #git map branch to remote
-function mapbranch() {
+function branchpush() {
   remote=${1:-origin}
   current_branch=$(git rev-parse --abbrev-ref HEAD)
-  git branch --set-upstream-to=$remote/$current_branch $current_branch
+  git push --set-upstream $remote $current_branch
 }
 
 #fix delete key for Mac
