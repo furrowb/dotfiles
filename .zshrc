@@ -16,7 +16,6 @@ BULLETTRAIN_PROMPT_ORDER=(
   context
   ruby
   dir
-  kctx
   git
   time
   status
