@@ -14,7 +14,6 @@ source "$HOME/.dotfiles/zsh_basics"
 ZSH_THEME="bullet-train"
 BULLETTRAIN_PROMPT_ORDER=(
   context
-  ruby
   dir
   git
   time
